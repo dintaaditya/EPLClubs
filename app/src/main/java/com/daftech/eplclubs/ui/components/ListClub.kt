@@ -25,7 +25,7 @@ fun ListClubs(
         verticalArrangement = Arrangement.spacedBy(16.dp),
         modifier = modifier.testTag("ClubList")
     ) {
-        items(listClub) { data ->
+        items(listClub, key = { it.id }) { data ->
             ClubItem(
                 club = data,
                 modifier = Modifier.clickable {

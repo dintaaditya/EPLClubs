@@ -14,6 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -97,17 +99,26 @@ private fun BottomBar(
             NavigationItem(
                 title = stringResource(R.string.menu_home),
                 icon = Icons.Default.Home,
-                screen = Screen.Home
+                screen = Screen.Home,
+                modifier = Modifier.semantics {
+                    contentDescription = "home_page"
+                }
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_favorite),
                 icon = Icons.Default.Favorite,
-                screen = Screen.Favorite
+                screen = Screen.Favorite,
+                modifier = Modifier.semantics {
+                    contentDescription = "favorite_page"
+                }
             ),
             NavigationItem(
                 title = stringResource(R.string.menu_about),
                 icon = Icons.Default.AccountCircle,
-                screen = Screen.About
+                screen = Screen.About,
+                modifier = Modifier.semantics {
+                    contentDescription = "about_page"
+                }
             ),
         )
 

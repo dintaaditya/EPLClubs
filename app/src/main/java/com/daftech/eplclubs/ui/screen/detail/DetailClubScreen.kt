@@ -141,7 +141,7 @@ fun ClubDetail(
                 }
             }
             Text(
-                text = club.fullname,
+                text = club.name,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 24.sp,
@@ -151,7 +151,7 @@ fun ClubDetail(
                     .padding(top = 8.dp)
             )
             Text(
-                text = "(${club.nickname})",
+                text = "(${club.fullname})",
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontSize = 20.sp,
@@ -160,8 +160,9 @@ fun ClubDetail(
                     .fillMaxWidth()
             )
 
-            DetailInfo("Founded ", club.founded, Modifier.padding(top = 16.dp))
-            DetailInfo("Ground ", "${club.ground} (${club.capacity})", Modifier.padding(top = 4.dp))
+            DetailInfo("Nickname", club.nickname, Modifier.padding(top = 16.dp))
+            DetailInfo("Founded", club.founded, Modifier.padding(top = 16.dp))
+            DetailInfo("Ground", "${club.ground} (${club.capacity})", Modifier.padding(top = 4.dp))
 
             Divider(modifier = Modifier.padding(16.dp))
             Text(
