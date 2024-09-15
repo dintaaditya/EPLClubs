@@ -3,6 +3,7 @@ package com.daftech.eplclubs.data
 import com.daftech.eplclubs.model.Club
 import com.daftech.eplclubs.model.ClubData
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
 
 class ClubRepository {
@@ -17,8 +18,11 @@ class ClubRepository {
         }
     }
 
-    fun getAllClub(): Flow<List<Club>> {
-        return flowOf(clubs)
+    fun getClub(query: String) = flow {
+        val data = clubs.filter {
+            it.name.contains(query, ignoreCase = true)
+        }
+        emit(data)
     }
 
     fun getClubById(clubId: Int): Club {

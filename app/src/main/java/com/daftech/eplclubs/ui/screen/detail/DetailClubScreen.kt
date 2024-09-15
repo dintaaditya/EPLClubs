@@ -144,7 +144,7 @@ fun ClubDetail(
 
 }
 
-@Preview(showBackground = true, device = Devices.PIXEL_4)
+@Preview(showBackground = true)
 @Composable
 fun DetailContentPreview() {
     EPLClubsTheme {

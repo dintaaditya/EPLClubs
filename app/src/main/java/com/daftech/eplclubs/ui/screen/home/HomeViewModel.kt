@@ -1,5 +1,7 @@
 package com.daftech.eplclubs.ui.screen.home
 
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.daftech.eplclubs.data.ClubRepository
@@ -15,9 +17,13 @@ class HomeViewModel(private val repository: ClubRepository) : ViewModel() {
     val uiState: StateFlow<UiState<List<Club>>>
         get() = _uiState
 
-    fun getAllClubs() {
+    private val _query = mutableStateOf("")
+    val query: State<String> get() = _query
+
+    fun getClub(query: String) {
+        _query.value = query
         viewModelScope.launch {
-            repository.getAllClub()
+            repository.getClub(query)
                 .catch {
                     _uiState.value = UiState.Error(it.message.toString())
                 }

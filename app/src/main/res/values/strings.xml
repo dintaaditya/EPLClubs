@@ -5,9 +5,12 @@
     <string name="menu_favorite">Favorite</string>
     <string name="menu_about">About</string>
 
-    <string name="placeholder_search">Enter club name</string>
+    <string name="placeholder_search">Search club name…</string>
     <string name="back_button">Back Button</string>
     <string name="add_to_favorite">Add to Favorites</string>
     <string name="remove_from_favorite">Remove from Favorites</string>
+
+    <string name="mssg_empty_data_home">No result founds, Please check your filters</string>
+    <string name="mssg_empty_data_favorite">No Favorite Club</string>
 
 </resources>

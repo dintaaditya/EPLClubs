@@ -21,12 +21,23 @@ import com.daftech.eplclubs.ui.theme.EPLClubsTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Search(modifier: Modifier = Modifier) {
-    SearchBar(query = "", onQueryChange = {}, onSearch = {}, active = false, onActiveChange = {},
+fun Search(
+    query: String,
+    onQueryChange: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    SearchBar(
+        query = query,
+        onQueryChange = onQueryChange,
+        onSearch = {},
+        active = false,
+        onActiveChange = {},
         leadingIcon = {
-            Icon(imageVector = Icons.Default.Search,
+            Icon(
+                imageVector = Icons.Default.Search,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant)
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
+            )
         },
         placeholder = {
             Text(text = stringResource(id = R.string.placeholder_search))
@@ -47,6 +58,9 @@ fun Search(modifier: Modifier = Modifier) {
 @Composable
 fun SearchPreview() {
     EPLClubsTheme {
-        Search()
+        Search(
+            "",
+            { }
+        )
     }
 }
