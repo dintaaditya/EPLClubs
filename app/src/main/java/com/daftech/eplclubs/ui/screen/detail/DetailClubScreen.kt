@@ -131,7 +131,7 @@ fun ClubDetail(
                         .clip(CircleShape)
                         .size(32.dp)
                         .background(Color.White)
-                        .testTag("favorite_detail_button")
+                        .testTag("favorite_button")
                 ) {
                     Icon(
                         imageVector = if (isFavorite) Icons.Default.Favorite else Icons.Default.FavoriteBorder,

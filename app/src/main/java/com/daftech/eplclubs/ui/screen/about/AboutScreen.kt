@@ -24,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -62,7 +63,7 @@ fun AboutScreen(
             )
             Spacer(modifier = Modifier.padding(top = 16.dp))
             Text(
-                text = "Dinta Aditya Fauzi",
+                text = stringResource(id = R.string.author_name),
                 color = Color.Black,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
@@ -70,7 +71,7 @@ fun AboutScreen(
                 textAlign = TextAlign.Center
             )
             Text(
-                text = "dintaaditya27@gmail.com",
+                text = stringResource(id = R.string.author_email),
                 color = Color.Black,
                 fontSize = 16.sp,
                 modifier = Modifier.fillMaxWidth(),

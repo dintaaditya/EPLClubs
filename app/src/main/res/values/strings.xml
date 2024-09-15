@@ -13,4 +13,7 @@
     <string name="mssg_empty_data_home">No result founds, Please check your filters</string>
     <string name="mssg_empty_data_favorite">No Favorite Club</string>
 
+    <string name="author_name">Dinta Aditya Fauzi</string>
+    <string name="author_email">dintaaditya27@gmail.com</string>
+
 </resources>
