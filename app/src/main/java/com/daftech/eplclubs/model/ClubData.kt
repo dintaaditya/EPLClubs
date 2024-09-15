@@ -38,7 +38,7 @@ object ClubData {
             "1899; 125 years ago",
             "Dean Court",
             "11,307",
-            "AFC Bournemouth (/ˈbɔːrnməθ/ ⓘ BORN-məth) is a professional association football club based in Kings Park, Boscombe, a suburb of Bournemouth, Dorset, England. They compete in the Premier League, the top tier of English football. Formed in 1899 as Boscombe, the club adopted their current name in 1971. Nicknamed \" The Cherries\", and commonly referred to as Bournemouth, they have played their home games at Dean Court since 1910."
+            "AFC Bournemouth is a professional association football club based in Kings Park, Boscombe, a suburb of Bournemouth, Dorset, England. They compete in the Premier League, the top tier of English football. Formed in 1899 as Boscombe, the club adopted their current name in 1971. Nicknamed \" The Cherries\", and commonly referred to as Bournemouth, they have played their home games at Dean Court since 1910."
         ),
         Club(
             4,
@@ -74,7 +74,7 @@ object ClubData {
             "10 March 1905; 119 years ago",
             "Stamford Bridge",
             "40,173",
-            "Chelsea Football Club is a professional football club based in Fulham, West London, England. They compete in the Premier League, the top tier of English football. Founded in 1905, the team play their home games at Stamford Bridge.[4] The club won their first major honour, the League championship, in 1955. They won the FA Cup for the first time in 1970, won their first European honour, the Cup Winners' Cup, in 1971, and became the third English club to win the Club World Cup in 2022."
+            "Chelsea Football Club is a professional football club based in Fulham, West London, England. They compete in the Premier League, the top tier of English football. Founded in 1905, the team play their home games at Stamford Bridge. The club won their first major honour, the League championship, in 1955. They won the FA Cup for the first time in 1970, won their first European honour, the Cup Winners' Cup, in 1971, and became the third English club to win the Club World Cup in 2022."
         ),
         Club(
             7,
@@ -159,7 +159,7 @@ object ClubData {
             "1880; 144 years ago",
             "Etihad Stadium",
             "53,400",
-            "Manchester City Football Club is a professional football club based in Manchester, England. The club competes in the Premier League, the top tier of English football. Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club in 1887 and Manchester City in 1894. The club's home ground is the City of Manchester Stadium in east Manchester, to which they moved in 2003, having played at Maine Road since 1923. Manchester City adopted their sky blue home shirts in 1894, the first season with the current name.[4] The club has won 10 league titles, seven FA Cups, eight League Cups, seven FA Community Shields, one UEFA Champions League, one European Cup Winners' Cup, one UEFA Super Cup and one FIFA Club World Cup."
+            "Manchester City Football Club is a professional football club based in Manchester, England. The club competes in the Premier League, the top tier of English football. Founded in 1880 as St. Mark's (West Gorton), they became Ardwick Association Football Club in 1887 and Manchester City in 1894. The club's home ground is the City of Manchester Stadium in east Manchester, to which they moved in 2003, having played at Maine Road since 1923. Manchester City adopted their sky blue home shirts in 1894, the first season with the current name. The club has won 10 league titles, seven FA Cups, eight League Cups, seven FA Community Shields, one UEFA Champions League, one European Cup Winners' Cup, one UEFA Super Cup and one FIFA Club World Cup."
         ),
         Club(
             14,
@@ -207,7 +207,7 @@ object ClubData {
             "21 November 1885; 138 years ago",
             "St Mary's Stadium",
             "32,384",
-            "Southampton Football Club (/saʊθˈ(h)æmptən/ ⓘ) is a professional football club based in Southampton, Hampshire, England. The club competes in the Premier League, the top tier of English football, after achieving promotion in the 2024 EFL Championship play-off final. Its home ground since 2001 has been St Mary's Stadium, before which it was based at The Dell. The team play in red and white shirts. They have been nicknamed \"The Saints\" because of the club's beginnings as a church football team at St Mary's Church. Southampton shares a long-standing South Coast derby rivalry with Portsmouth, in part due to geographic proximity and both cities' respective maritime histories."
+            "Southampton Football Club is a professional football club based in Southampton, Hampshire, England. The club competes in the Premier League, the top tier of English football, after achieving promotion in the 2024 EFL Championship play-off final. Its home ground since 2001 has been St Mary's Stadium, before which it was based at The Dell. The team play in red and white shirts. They have been nicknamed \"The Saints\" because of the club's beginnings as a church football team at St Mary's Church. Southampton shares a long-standing South Coast derby rivalry with Portsmouth, in part due to geographic proximity and both cities' respective maritime histories."
         ),
         Club(
             18,
@@ -219,7 +219,7 @@ object ClubData {
             "5 September 1882; 142 years ago",
             "Tottenham Hotspur Stadium",
             "62, 850",
-            "Tottenham Hotspur Football Club, commonly referred to as simply Tottenham ( / ˈtɒtənəm /, [2][3] TOT -ən - əm, / tɒtnəm /, tot - nəm) or Spurs, is a professional football club based in Tottenham, North London, England. It competes in the Premier League, the top tier of English football. The team has played its home matches in the Tottenham Hotspur Stadium since 2019, replacing their former home of White Hart Lane, which had been demolished to make way for the new stadium on the same site."
+            "Tottenham Hotspur Football Club, commonly referred to as simply Tottenham or Spurs, is a professional football club based in Tottenham, North London, England. It competes in the Premier League, the top tier of English football. The team has played its home matches in the Tottenham Hotspur Stadium since 2019, replacing their former home of White Hart Lane, which had been demolished to make way for the new stadium on the same site."
         ),
         Club(
             19,
@@ -243,7 +243,7 @@ object ClubData {
             "1877; 147 years ago",
             "Molineux Stadium",
             "31,750",
-            "Wolverhampton Wanderers Football Club (/ˌwʊlvərˈhæmptən/ ⓘ WUUL-vər-HAMP-tən), commonly referred to as Wolves,[1] is a professional football club based in Wolverhampton, England. The club competes in the Premier League, the top tier of English football. The club has played at Molineux Stadium since moving from Dudley Road in 1889. The club's traditional kit consists of old gold shirts and socks with black shorts. Since 1979, the kit has also featured the club's \" wolf 's head\" logo. Long-standing rivalries exist with other clubs from the West Midlands, including Aston Villa, and Birmingham City but the main one being the Black Country derby contested with West Bromwich Albion. Since 2016, the club has been owned by the Chinese conglomerate Fosun International."
+            "Wolverhampton Wanderers Football Club, commonly referred to as Wolves, is a professional football club based in Wolverhampton, England. The club competes in the Premier League, the top tier of English football. The club has played at Molineux Stadium since moving from Dudley Road in 1889. The club's traditional kit consists of old gold shirts and socks with black shorts. Since 1979, the kit has also featured the club's \" wolf 's head\" logo. Long-standing rivalries exist with other clubs from the West Midlands, including Aston Villa, and Birmingham City but the main one being the Black Country derby contested with West Bromwich Albion. Since 2016, the club has been owned by the Chinese conglomerate Fosun International."
         )
     )
 }

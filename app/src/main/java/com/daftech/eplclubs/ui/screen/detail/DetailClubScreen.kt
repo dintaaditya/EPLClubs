@@ -16,8 +16,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FavoriteBorder
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
@@ -28,9 +30,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Devices
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.graphics.toColorInt
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.daftech.eplclubs.R
@@ -136,13 +140,71 @@ fun ClubDetail(
                     )
                 }
             }
+            Text(
+                text = club.fullname,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                fontSize = 24.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 8.dp)
+            )
+            Text(
+                text = "(${club.nickname})",
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+            )
+
+            DetailInfo("Founded ", club.founded, Modifier.padding(top = 16.dp))
+            DetailInfo("Ground ", "${club.ground} (${club.capacity})", Modifier.padding(top = 4.dp))
+
+            Divider(modifier = Modifier.padding(16.dp))
+            Text(
+                text = club.description,
+                color = Color.Black,
+                fontSize = 16.sp,
+                textAlign = TextAlign.Justify,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(8.dp)
+            )
+
         }
-
-
     }
-
-
 }
+
+@Composable
+fun DetailInfo(
+    title: String,
+    content: String,
+    modifier: Modifier = Modifier
+) {
+    Column(modifier = modifier.padding(horizontal = 8.dp)) {
+        Text(
+            text = title,
+            color = Color.Black,
+            fontWeight = FontWeight.Bold,
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+        Text(
+            text = content,
+            color = Color.Black,
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+        )
+    }
+}
+
 
 @Preview(showBackground = true)
 @Composable
