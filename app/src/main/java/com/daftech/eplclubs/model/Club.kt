@@ -11,4 +11,5 @@ data class Club(
     val ground: String,
     val capacity: String,
     val description: String,
+    var isFavorite: Boolean? = false
 )

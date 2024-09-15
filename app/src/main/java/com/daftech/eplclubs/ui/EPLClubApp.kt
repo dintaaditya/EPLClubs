@@ -16,14 +16,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.daftech.eplclubs.R
 import com.daftech.eplclubs.ui.navigation.NavigationItem
 import com.daftech.eplclubs.ui.navigation.Screen
 import com.daftech.eplclubs.ui.screen.about.AboutScreen
+import com.daftech.eplclubs.ui.screen.detail.DetailClubScreen
 import com.daftech.eplclubs.ui.screen.favorite.FavoriteScreen
 import com.daftech.eplclubs.ui.screen.home.HomeScreen
 
@@ -32,9 +35,15 @@ fun EPLClubApp(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
 ) {
+
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+
     Scaffold(
         bottomBar = {
-            BottomBar(navController)
+            if (currentRoute != Screen.DetailClub.route) {
+                BottomBar(navController)
+            }
         },
         modifier = modifier
     ) { innerPadding ->
@@ -44,13 +53,33 @@ fun EPLClubApp(
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
-                HomeScreen()
+                HomeScreen(
+                    navigateToDetail = { clubId ->
+                        navController.navigate(Screen.DetailClub.createRoute(clubId))
+                    }
+                )
             }
             composable(Screen.Favorite.route) {
-                FavoriteScreen()
+                FavoriteScreen(
+                    navigateToDetail = { clubId ->
+                        navController.navigate(Screen.DetailClub.createRoute(clubId))
+                    }
+                )
             }
             composable(Screen.About.route) {
                 AboutScreen()
+            }
+            composable(
+                route = Screen.DetailClub.route,
+                arguments = listOf(navArgument("clubId") { type = NavType.IntType }),
+            ) {
+                val id = it.arguments?.getInt("clubId") ?: -1
+                DetailClubScreen(
+                    rewardId = id,
+                    navigateBack = {
+                        navController.navigateUp()
+                    },
+                )
             }
         }
     }
